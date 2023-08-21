@@ -1,0 +1,33 @@
+
+import java.io.*;  
+import java.util.*;    
+class Main{
+    public static String ReverseString(String s)  
+    {  
+        char[] rS = new char[s.length()];  
+      
+        Stack<Character> st = new Stack<Character>();  
+        
+        for (int j = 0; j < s.length(); j++) {  
+           
+            st.push(s.charAt(j));  
+        }  
+       
+      
+        int j = 0;  
+        while (!st.isEmpty()) { 
+            rS[j++] = st.pop();  
+        }  
+        
+        return new String(rS);  
+    }    
+    
+    public static void main(String args[])  
+    {  
+        String s1 = " Nomitha";
+        
+        System.out.println(s1 + " <- Reverse -> "  
+                           + ReverseString(s1));          
+        
+    }  
+}  

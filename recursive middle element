@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Rec {
+    
+    static void Rec(int k, int l, int limit, int m) {
+        if(k<=0 && l>=limit){
+            return;
+        }
+        if (k >= 0) {
+            System.out.print(" "+k);
+        }
+        if (l<= limit) {
+            System.out.print(" "+l);
+        }
+        Rec(k - m, l + m, limit, m);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter the desired number: ");
+        int n = scanner.nextInt();
+        System.out.println("Enter the limit:");
+        int limit = scanner.nextInt();
+        System.out.println("Enter m:");
+        int m = scanner.nextInt();
+        Rec(n, n, limit, m);
+    }
+}
+
